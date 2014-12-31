@@ -1,0 +1,27 @@
+<html> 
+<head> 
+    <title>title</title> 
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+    <script> 
+        $.ajax({ 
+            url:"http://www.baidu.com", 
+            type:"GET", 
+            success: function(data){ 
+                $('body').append( "Name: " + data ); 
+            },
+            fail: function() {
+                $('body').append( "Failed"); 
+            },
+            complete: function(xhr,status) {
+                $('body').append( "Completed"); 
+            },
+            error: function(xhr,status,error) {
+                $('body').append( "Error"); 
+            }
+        }); 
+    </script> 
+</head> 
+<body> 
+测试Ajax跨域问题 
+</body> 
+</html> 

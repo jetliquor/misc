@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+    <script type="application/javascript" src="jquery-1.11.1.js">
+    </script>
+    <script type="application/javascript">
+        function submitRequest()
+        {
+            var forms = $("form")[0];
+            var attrFormMethod = forms.getAttribute("_form-method");
+                        
+            var menu =  {
+                "button":[
+                    {	
+                        "type":"click",
+                        "name":"今日歌曲",
+                        "key":"V1001_TODAY_MUSIC"
+                    },
+                    {
+                        "name":"菜单",
+                        "sub_button":[
+                    {	
+                        "type":"view",
+                        "name":"搜索",
+                        "url":"http://www.soso.com/"
+                    },
+                    {
+                        "type":"view",
+                        "name":"视频",
+                        "url":"http://v.qq.com/"
+                    },
+                    {
+                        "type":"click",
+                        "name":"赞一下我们",
+                        "key":"V1001_GOOD"
+                    }]
+                }]
+            };
+            var msg = {
+                "touser":"oGLr7jmEBuJKIMQGKwwET37LOT0E",
+                "msgtype":"text",
+                "text":
+                {
+                     "content":"Hei you!"
+                }
+            };            
+            
+            var dataJson = JSON.stringify(msg);
+            var mpUrl = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=9xv9UYUa-cbUNNNyc1OSuYahDADoIdkqXmWO7lEdldPNb2rQButQv0C5cR-ei9wDkYxLemNXtiDWXg4XcrZua3MZpwITF05dsDybxXyD0_U";
+            
+            $.ajax({  
+                type:"POST",  
+                url:"https://api.weixin.qq.com/cgi-bin/menu/create?access_token=9xv9UYUa-cbUNNNyc1OSuYahDADoIdkqXmWO7lEdldPNb2rQButQv0C5cR-ei9wDkYxLemNXtiDWXg4XcrZua3MZpwITF05dsDybxXyD0_U",  
+                data:{
+                "touser":"oGLr7jmEBuJKIMQGKwwET37LOT0E",
+                "msgtype":"text",
+                "text":
+                {
+                     "content":"Hei you!"
+                }
+            },  
+                dataType:"json",
+                success: function(data) {  
+                    alert("feedback from .post()");
+                }  
+            });
+            
+//            var xhr =  new XMLHttpRequest();
+//            xhr.open("POST", mpUrl, true);
+//            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');            
+//            xhr.send(msg);
+            
+//            $.post(mpUrl, msg, 
+//                   function(data, textStatus, jqXHR)
+//                    {
+//                        //data - JSON object from server.
+//                        alert("feedback from .post()");
+//                    });
+        }
+
+        $(document).ready(function(){
+            $("#btnGetAT").click(function(){                
+                var urlGetAT = "https://api.weixin.qq.com/cgi-bin/token";
+                var infoUser = {
+                    grant_type: "client_credential",
+                    appid: "wx52c4375d0e62a45f",
+                    secret: "7eab6b74dd4ecfc85741dfa5658bc441"
+                };
+                var jqxhr = $.get(urlGetAT, function() {
+                  alert( "success" );
+                })
+                  .done(function() {
+                    alert( "second success" );
+                  })
+                  .fail(function() {
+                    alert( "error" );
+                  })
+                  .always(function() {
+                    alert( "finished" );
+                  });
+
+                // Set another completion function for the request above
+//                jqxhr.always(function() {
+//                  alert( "second finished" );
+//                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+  <h1>This is a Heading</h1>
+
+  <p>This is a paragraph.</p>
+    <button id="btnGetAT">new AT</button></br>
+    <div>
+        <p id="accessTakon">
+        </p>
+    </div>
+    <form _form-method="POST" id="menuForm">
+    <input type="button" onclick="submitRequest()" value="submit"></br>
+    menu format: <textarea name="comment" form="menuForm">
+Enter text here...</textarea>
+    </form>
+
+</body>
+
+</html>
