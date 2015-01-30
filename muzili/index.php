@@ -19,14 +19,7 @@
  *
  */
 	define('ENVIRONMENT', 'development');
-	/*
-	$req_url = $_SERVER["HTTP_HOST"];
-	if ($req_url) {
-		echo "<p><h2>".$req_url."</h2></p>";
-	}
-	foreach ($_SERVER as $key => $value) {
-		echo "<p><h2>".$key."\t".$value."</h2></p>\n";
-	}*/
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -80,7 +73,12 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
+	$http_host = $_SERVER['HTTP_HOST'];
+	if (strpos($http_host, 'ghed.') === false) {
+		$application_folder = 'application\muzili';
+	} else {
+		$application_folder = 'application\ghed';
+	}
 
 /*
  * --------------------------------------------------------------------

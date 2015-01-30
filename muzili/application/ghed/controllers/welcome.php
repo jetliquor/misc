@@ -19,10 +19,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data = array(
-			'base_url' => $this->config->config['base_url'],
-		);
-		$this->load->view('lizimu', $data);
+		$this->load->view('welcome_message');
 	}
 }
 

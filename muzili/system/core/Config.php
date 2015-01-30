@@ -81,6 +81,15 @@ class CI_Config {
 
 			$this->set_item('base_url', $base_url);
 		}
+		
+		// Set the prefix of url
+		if (isset($this->config['domain'])) {
+			$url_req = $_SERVER['HTTP_HOST'];
+			$found_pre = strstr($url_req, '.'.$this->config['domain'], true);
+			if ($found_pre) {
+				$this->config['http_host_prefix'] = $found_pre;
+			}
+		}
 	}
 
 	// --------------------------------------------------------------------
