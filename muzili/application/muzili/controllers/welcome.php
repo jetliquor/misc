@@ -28,6 +28,10 @@ class Welcome extends CI_Controller {
 			$this->load->view ( $params );
 		}
 	}
+	public function ss() {
+		$this->load->helper('path');
+		$this->load->view ("m_ss");
+	}
 }
 
 /* End of file welcome.php */

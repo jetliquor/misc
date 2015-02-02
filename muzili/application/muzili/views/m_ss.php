@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>LSS</title>
 <link rel="stylesheet"
-	href="<?php echo $this->config->config['base_url'].'css/idangerous.swiper.css';?>">
+	href="<?php echo get_css_path().'idangerous.swiper.css';?>">
 <style>
 /* Demo Styles */
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 .slideImg {
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 
 .pagination {
@@ -62,34 +62,27 @@ body {
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<img alt="1"
-					src="<?php echo $this->config->config['base_url'].'assets/img/5.jpg';?>">
+				<img alt="1" src="<?php echo get_img_path().'5.jpg';?>">
 			</div>
 			<div class="swiper-slide">
-				<img alt="2"
-					src="<?php echo $this->config->config['base_url'].'assets/img/1.jpg';?>">
+				<img alt="2" src="<?php echo get_img_path().'1.jpg';?>">
 			</div>
 			<div class="swiper-slide">
-				<img alt="3"
-					src="<?php echo $this->config->config['base_url'].'assets/img/2.jpg';?>">
+				<img alt="3" src="<?php echo get_img_path().'2.jpg';?>">
 			</div>
 			<div class="swiper-slide">
-				<img alt="4"
-					src="<?php echo $this->config->config['base_url'].'assets/img/3.jpg';?>">
+				<img alt="4" src="<?php echo get_img_path().'3.jpg';?>">
 			</div>
 			<div class="swiper-slide">
-				<img alt="5"
-					src="<?php echo $this->config->config['base_url'].'assets/img/4.jpg';?>">
+				<img alt="5" src="<?php echo get_img_path().'4.jpg';?>">
 			</div>
 		</div>
 		<div class="pagination"></div>
 	</div>
 
-	<script
-		src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 
-	<script
-		src="<?php echo $this->config->config['base_url'].'js/idangerous.swiper.min.js';?>"></script>
+	<script src="<?php echo get_js_path().'idangerous.swiper.min.js';?>"></script>
 
 	<script type="text/javascript">
 	$(document).ready(function(){

@@ -14,9 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/git/muzili/';
-$config['domain_list'] = array('muzili', 'ghed');
-$config['domain'] = '';
+$config['base_url']	= '';
+$config['domain'] = 'muzili';
 		
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +27,7 @@ $config['domain'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

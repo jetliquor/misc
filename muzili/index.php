@@ -19,7 +19,6 @@
  *
  */
 	define('ENVIRONMENT', 'development');
-
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -73,13 +72,16 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$http_host = $_SERVER['HTTP_HOST'];
-	if (strpos($http_host, 'ghed.') === false) {
-		$application_folder = 'application\muzili';
-	} else {
-		$application_folder = 'application\ghed';
+	$application_folder = 'application/muzili';
+	if (isset($_SERVER['HTTP_HOST'])) {
+		$http_host = $_SERVER['HTTP_HOST'];
+		if (strpos($http_host, 'ghed.') === false) {
+			$application_folder = 'application/muzili';
+		} else {
+			$application_folder = 'application/ghed';
+		}
 	}
-
+	//$application_folder = 'application/ghed';
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER

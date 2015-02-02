@@ -1,0 +1,84 @@
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+body {
+  min-width: 770px;
+}
+
+/* Don't let the lead text change font-size. */
+.lead {
+  font-size: 16px;
+}
+
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+  min-width: 770px;
+  max-width: 1440px;
+}
+
+/* Demonstrate the grids */
+.col-xs-4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+#top-nav {
+	width: 100%;
+	height: 25px;
+	margin: 0px auto;
+}
+
+#footer {
+	background: #7F7F7F url(../img/bg_footer.jpg) repeat-x;
+	padding: 0px;
+	min-width: 770px;
+	width: auto !important;
+	margin: 0px auto;
+	cursor: default;
+}
+
+#nav-menu {
+	background: url(../img/bg_navbar.jpg) repeat-x left bottom !important;
+	height: 50px;
+	border-top: 1px solid #d7d4cf;
+	border-bottom: 1px solid #C4C6C3;
+	min-width: 770px;
+	width: auto !important;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10;
+}
+
+.navi-bar {
+	background: url(img/menu_nav_bg.jpg) repeat-x left bottom !important;
+}
