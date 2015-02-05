@@ -81,7 +81,7 @@ if (defined('ENVIRONMENT'))
 			$application_folder = 'application/ghed';
 		}
 	}
-	//$application_folder = 'application/ghed';
+	$application_folder = 'application/ghed';
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER

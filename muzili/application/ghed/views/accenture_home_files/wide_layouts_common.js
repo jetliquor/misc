@@ -1,0 +1,6 @@
+
+$(document).ready(function(){var banner=$(".bannersearch");if(banner!=null&&banner.length>0){var snav=$(".secondary-nav");var adjustWidth=$(".country-language-selector").outerWidth()+34+banner.outerWidth();$("#SecondaryNavLinks").css("max-width",(910-34-adjustWidth)+"px");snav.append(banner);$(".BtnSearch").attr('src','/PublishingImages/Accenture/CareersSearchButtonImage.PNG');$(".bannersearch").show();$(".country-language-selector").show();}
+if(/msie|MSIE 7/.test(navigator.userAgent)){$('.user-status').addClass('user-statusIE7');}
+if(navigator.userAgent.toLowerCase().indexOf('safari')>-1||navigator.userAgent.toLowerCase().indexOf('chrome')>-1){$('div[id$="LogoutPanel"] .LoginNote').addClass('loginNoteSafariChrome');$('.LoginName').addClass('LoginNameSafariChrome');}
+if(navigator.userAgent.toLowerCase().indexOf('safari')>-1||navigator.userAgent.toLowerCase().indexOf('chrome')>-1||navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/Android/i)){$('.user-status').addClass('user-statusSafariChromeMobile');}
+if(TnT_CurrentLayout=="SiteSearch"||TnT_CurrentLayout=="MicrositesSiteSearch"){$(".page .main-contents").attr('style','position: static;');}});

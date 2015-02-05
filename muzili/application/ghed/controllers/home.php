@@ -10,9 +10,10 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('path');
-	    $data['base'] = base_url();
-		$this->load->view('header', $data);
-		$this->load->view('home_page', $data);
-		$this->load->view('footer', $data);
+// 	    $data['base'] = base_url();
+// 		$this->load->view('header', $data);
+// 		$this->load->view('home_page', $data);
+// 		$this->load->view('footer', $data);
+		$this->load->view('home_temp');
 	}
 }
