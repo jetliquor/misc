@@ -19,14 +19,9 @@ class Welcome extends CI_Controller {
 	 *
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index($params = '') {
-		if (isset ( $params )) {
-			$this->load->view ( 'lizimu' );
-		} else if (is_array ( $params )) {
-			$this->load->view ( $params [0] );
-		} else {
-			$this->load->view ( $params );
-		}
+	public function index() {
+		$this->load->helper('path');
+		$this->load->view ("m_ss");
 	}
 	public function ss() {
 		$this->load->helper('path');

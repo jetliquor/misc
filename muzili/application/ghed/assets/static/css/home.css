@@ -1,0 +1,17 @@
+
+#nav_bar {
+	padding-top: 80px;
+}
+
+#nav_group button {
+	width: 100%;
+}
+
+#nav_group div {
+	text-align: center;
+}
+
+#nav_group a {
+	font-size: 24px;
+	color: gray;
+}

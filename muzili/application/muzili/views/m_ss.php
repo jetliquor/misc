@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LSS</title>
+<link rel="shortcut icon" href="<?php echo '/'.APPPATH.'favicon.ico'?>">
 <link rel="stylesheet"
 	href="<?php echo get_css_path().'idangerous.swiper.css';?>">
 <style>
@@ -85,14 +86,30 @@ body {
 	<script src="<?php echo get_js_path().'idangerous.swiper.min.js';?>"></script>
 
 	<script type="text/javascript">
-	$(document).ready(function(){
+	$(window).load(function() {
+		refreshImgs();
+	});
+
+	$(window).resize(function() {
+		refreshImgs();
+	});
+
+	function refreshImgs() {
  		$('.swiper-container').css({"width":window.innerWidth,"height":window.innerHeight});
  		$('swiper-slide').css({"width":window.innerWidth,"height":window.innerHeight});
- 		$('img').css({"width":window.innerWidth,"height":window.innerHeight,"vertical-align":"middle"});
- 		//$('img').addClass("slideImg");
-	});
+ 		var ww = window.innerWidth;
+ 		var wh = window.innerHeight;
+ 		var w, h, f;
+ 		$('img').each(function() {
+ 	 		w = $(this).width();
+ 	 		h = $(this).height();
+ 	 		f = Math.min(ww / w, wh / h);
+ 	 		$(this).css({"width" : w*f,"height" : h*f,"margin-top" : (wh-h*f)/2});
+ 		});
+	}
 	var mySwiper = new Swiper('.swiper-container',{ pagination:
 	'.pagination', paginationClickable: true, mode: 'vertical', grabCursor: true });
+
 	</script>
 </body>
 </html>

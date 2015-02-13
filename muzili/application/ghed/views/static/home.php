@@ -2,29 +2,34 @@
 <html>
 <head>
 <title>国翰</title>
-<link rel="shortcut icon" href="<?php echo '/'.APPPATH.'favicon.ico'?>">
+<link rel="shortcut icon" href="favicon.ico">
 <meta charset="utf-8">
-<link href="<?php echo get_css_path();?>common.css" rel="stylesheet">
-<link href="<?php echo get_css_path();?>home_temp.css" rel="stylesheet">
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
-	rel="stylesheet">
+
+<?php
+$css_dir = get_css_path ();
+$js_dir = get_js_path ();
+$img_dir = get_img_path ();
+?>
+<link href="<?php echo $css_dir;?>bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo $css_dir;?>common.css" rel="stylesheet">
+<link href="<?php echo $css_dir;?>home.css" rel="stylesheet">
 </head>
 
 <body>
-	<div id="the_header">
+	<header id="the_header">
 		<div class="wrap">
-			<a href="/" title="SolarCity" id="logo"><img
-				src="/application/ghed/img/gh_logo.png" alt="SolarCity"></a>
+			<a href="#" title="SolarCity" id="logo"><img
+				src="<?php echo $img_dir;?>gh_logo.png" alt="SolarCity"></a>
 			<ul class="menu">
-				<li class="first expanded"><a href="/residential">充电桩</a></li>
-				<li class="expanded"><a href="/commercial">分布式发电</a></li>
-				<li class="leaf"><a href="/invest">储能</a></li>
-				<li class="expanded"><a href="/company">联系我们</a></li>
+				<li class="first expanded"><a href="/ghstatic/tesla">充电桩</a></li>
+				<li class="expanded"><a href="/ghstatic/solar">分布式发电</a></li>
+				<!-- <li class="leaf"><a href="/invest">储能</a></li>  -->
+				<li class="expanded"><a href="/ghstatic/contact">联系我们</a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
-	</div>
+	</header>
+
 	<div id="site_wrapper" class="container">
 		<div class="row" id="nav_bar">
 			<div
@@ -49,15 +54,13 @@
 				</div> -->
 				<div class="row" id="nav_group">
 					<div class="col-md-6 col-sm-6 col-xs-6">
-						<button type="button" class="btn btn-default">
-							<a href="/application/ghed/views/tesla.html">新能源汽车充电桩</a>
-						</button>
+						<a href="ghstatic/tesla" class="btn btn-default btn-lg"
+							role="button">新能源汽车充电桩</a>
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-6">
-						<button type="button" class="btn btn-default">
-							<a href="/application/ghed/views/solar.html">分布式发电</a>
-						</button>
-					</div> 
+						<a href="ghstatic/solar" class="btn btn-default btn-lg "
+							role="button">分布式发电</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,9 +72,8 @@
 		</div>
 	</footer>
 
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="<?php echo $js_dir;?>jquery-1.11.1.min.js"></script>
+	<script src="<?php echo $js_dir;?>bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var hw = window.innerHeight;
