@@ -18,7 +18,7 @@ $img_dir = get_img_path ();
 <body>
 	<header id="the_header">
 		<div class="wrap">
-			<a href="#" title="SolarCity" id="logo"><img
+			<a href="/ghstatic/home" title="SolarCity" id="logo"><img
 				src="<?php echo $img_dir;?>gh_logo.png" alt="SolarCity"></a>
 			<ul class="menu">
 				<li class="first expanded"><a href="/ghstatic/tesla">充电桩</a></li>

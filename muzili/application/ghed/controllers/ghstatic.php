@@ -11,9 +11,14 @@ class GHStatic extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('static/home');
+		$this->home();
 	}
 
+	public function home()
+	{
+		$this->load->view('static/home');
+	}
+	
 	public function contact()
 	{
 		$this->load->view('static/contact');
