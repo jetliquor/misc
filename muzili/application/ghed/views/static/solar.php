@@ -49,32 +49,32 @@ $img_dir = get_img_path ();
 				<div class="field-item even">
 					<div class="field-item even">
 						<div id="hpContent"></div>
-						<h2>在国翰，我们相信以更好的方式为家庭和企业以较低的成本，同时促进更清洁的地球提供动力。</h2>
-						<p>产生的，而不是支付电费的传统你自己的清洁能源。太阳能发电实际上可以花费更少的比你低，锁定的利率现付。节省最多可以添加到几千！有没有前期成本，你只需要一个良好的屋顶，因为太阳能电池板安装包括在不增加成本。</p>
+						<h2>在国翰，我们期望以更好的方式为家庭和企业提供更低成本的能源，以此来美化我们的地球。</h2>
+						<p>通过产生，而不是支付电费来获取您自己的清洁能源。太阳能发电实际上可以花费更少、稳定的支出，获得可观的收益！没有前期成本，您只需要的只是一个良好的屋顶，因为太阳能电池板安装在后期不需要开销。</p>
 					</div>
 				</div>
 
 				<div class="field-item odd">
 					<div id="quote_wrap" class="row">
-						<div class="col-md-3">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 							<div class="quote-block quote-1">
 								<div class="quote-slide">"你能帮助环境和节约资金"</div>
 							</div>
 						</div>
 
-						<div class="col-md-3">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 							<div class="quote-block quote-2">
 								<div class="quote-slide">"我们与国翰能源公司和的经历比我们预期的要好"</div>
 							</div>
 						</div>
 
-						<div class="col-md-3">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 							<div class="quote-block quote-3">
 								<div class="quote-slide">"我们不仅为环境保护作出贡献, 还能节省电费"</div>
 							</div>
 						</div>
 
-						<div class="col-md-3">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 							<div class="quote-block quote-4">
 								<div class="quote-slide">"在国翰能源的帮助下，我们可以了解到我们家未来二十年的能源需求"</div>
 							</div>
@@ -171,27 +171,27 @@ $img_dir = get_img_path ();
 
 					<div id="gallery_thumb">
 						<div class="row">
-							<div class="col-md-2">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 								<img src="<?php echo $img_dir;?>ssr-gallery-01.jpg" alt="太阳能分布式发电" title=""
 									data_count="0">
 							</div>
-							<div class="col-md-2" data-extra='1'>
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='1'>
 								<img src="<?php echo $img_dir;?>ssr-gallery-02.jpg" alt="太阳能分布式发电" title=""
 									data_count="1">
 							</div>
-							<div class="col-md-2" data-extra='2'>
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='2'>
 								<img src="<?php echo $img_dir;?>ssr-gallery-03.jpg" alt="太阳能分布式发电" title=""
 									data_count="2">
 							</div>
-							<div class="col-md-2" data-extra='3'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg" alt="太阳能分布式发电MD" title=""
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='3'>
+								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg" alt="太阳能分布式发电" title=""
 									data_count="3">
 							</div>
-							<div class="col-md-2" data-extra='4'>
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='4'>
 								<img src="<?php echo $img_dir;?>ssr-gallery-05.jpg" alt="太阳能分布式发电" title=""
 									data_count="4">
 							</div>
-							<div class="col-md-2" data-extra='5'>
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='5'>
 								<img src="<?php echo $img_dir;?>ssr-gallery-06.jpg" alt="太阳能分布式发电" title=""
 									data_count="5">
 							</div>
