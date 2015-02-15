@@ -18,13 +18,13 @@ $img_dir = get_img_path ();
 <body>
 	<header id="the_header">
 		<div class="wrap">
-			<a href="#" title="SolarCity" id="logo"><img
+			<a href="#" id="logo"><img
 				src="<?php echo $img_dir;?>gh_logo.png" alt="SolarCity"></a>
 			<ul class="menu">
 				<li class="first expanded"><a href="/ghstatic/tesla">充电桩</a></li>
 				<li class="expanded"><a href="/ghstatic/solar">分布式发电</a></li>
 				<!-- <li class="leaf"><a href="/invest">储能</a></li>  -->
-				<li class="expanded"><a href="/ghstatic/contact">联系我们</a></li>
+				<li class="expanded"><a data-toggle="modal" data-target="#gh_contact">联系我们</a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
@@ -86,5 +86,29 @@ $img_dir = get_img_path ();
 			}
 		});
 	</script>
+
+	<!-- Modal -->
+	<div class="modal fade" id="gh_contact" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true" style="padding-top: 70px;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">联系方式</h4>
+				</div>
+				<div class="modal-body" style="text-align: left; margin: 30px; ">
+					<p>电话：</p>
+					<p>邮箱：</p>
+					<p>地址：</p>
+				</div>
+<!-- 				<div class="modal-footer"> -->
+<!-- 				</div> -->
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

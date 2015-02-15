@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<hear>
+<head>
 <title>国翰 | 光伏</title>
 <link rel="shortcut icon" href="favicon.ico">
 <meta charset="utf-8">
@@ -18,13 +18,14 @@ $img_dir = get_img_path ();
 <body>
 	<header id="the_header">
 		<div class="wrap">
-			<a href="/ghstatic/home" title="SolarCity" id="logo"><img
+			<a href="/ghstatic/home" id="logo"><img
 				src="<?php echo $img_dir;?>gh_logo.png" alt="SolarCity"></a>
 			<ul class="menu">
-				<li class="first expanded"><a href="/ghstatic/tesla">充电桩</a></li>
-				<li class="expanded"><a href="/ghstatic/solar">分布式发电</a></li>
+				<li class="first expanded"><a href="/ghstatic/tesla"><?php echo lang('nav_charger');?></a></li>
+				<li class="expanded"><a href="#"><?php echo lang('nav_dist_sys');?></a></li>
 				<!-- <li class="leaf"><a href="/invest">储能</a></li>  -->
-				<li class="expanded"><a href="/ghstatic/contact">联系我们</a></li>
+				<li class="expanded"><a data-toggle="modal"
+					data-target="#gh_contact"><?php echo lang('nav_contact');?></a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
@@ -131,29 +132,33 @@ $img_dir = get_img_path ();
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="<?php echo $img_dir;?>ssr-gallery-01.jpg" alt="太阳能分布式发电"
-									data-holder-rendered="true">
+								<img src="<?php echo $img_dir;?>ssr-gallery-01.jpg"
+									alt="太阳能分布式发电" data-holder-rendered="true">
 								<div class="carousel-caption">...</div>
 							</div>
 							<div class="item">
-								<img src="<?php echo $img_dir;?>ssr-gallery-02.jpg" alt="太阳能分布式发电"
-									data-holder-rendered="true">
+								<img src="<?php echo $img_dir;?>ssr-gallery-02.jpg"
+									alt="太阳能分布式发电" data-holder-rendered="true">
 								<div class="carousel-caption">...</div>
 							</div>
 							<div class="item">
-								<img src="<?php echo $img_dir;?>ssr-gallery-03.jpg" alt="太阳能分布式发电" data-slide="3">
+								<img src="<?php echo $img_dir;?>ssr-gallery-03.jpg"
+									alt="太阳能分布式发电" data-slide="3">
 								<div class="carousel-caption">...</div>
 							</div>
 							<div class="item">
-								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg" alt="太阳能分布式发电" data-slide="4">
+								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg"
+									alt="太阳能分布式发电" data-slide="4">
 								<div class="carousel-caption">...</div>
 							</div>
 							<div class="item">
-								<img src="<?php echo $img_dir;?>ssr-gallery-05.jpg" alt="太阳能分布式发电" data-slide="5">
+								<img src="<?php echo $img_dir;?>ssr-gallery-05.jpg"
+									alt="太阳能分布式发电" data-slide="5">
 								<div class="carousel-caption">...</div>
 							</div>
 							<div class="item">
-								<img src="<?php echo $img_dir;?>ssr-gallery-06.jpg" alt="太阳能分布式发电" data-slide="6">
+								<img src="<?php echo $img_dir;?>ssr-gallery-06.jpg"
+									alt="太阳能分布式发电" data-slide="6">
 								<div class="carousel-caption">...</div>
 							</div>
 						</div>
@@ -172,28 +177,28 @@ $img_dir = get_img_path ();
 					<div id="gallery_thumb">
 						<div class="row">
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-								<img src="<?php echo $img_dir;?>ssr-gallery-01.jpg" alt="太阳能分布式发电" title=""
-									data_count="0">
+								<img src="<?php echo $img_dir;?>ssr-gallery-01.jpg"
+									alt="太阳能分布式发电" title="" data_count="0">
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='1'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-02.jpg" alt="太阳能分布式发电" title=""
-									data_count="1">
+								<img src="<?php echo $img_dir;?>ssr-gallery-02.jpg"
+									alt="太阳能分布式发电" title="" data_count="1">
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='2'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-03.jpg" alt="太阳能分布式发电" title=""
-									data_count="2">
+								<img src="<?php echo $img_dir;?>ssr-gallery-03.jpg"
+									alt="太阳能分布式发电" title="" data_count="2">
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='3'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg" alt="太阳能分布式发电" title=""
-									data_count="3">
+								<img src="<?php echo $img_dir;?>ssr-gallery-04.jpg"
+									alt="太阳能分布式发电" title="" data_count="3">
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='4'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-05.jpg" alt="太阳能分布式发电" title=""
-									data_count="4">
+								<img src="<?php echo $img_dir;?>ssr-gallery-05.jpg"
+									alt="太阳能分布式发电" title="" data_count="4">
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-extra='5'>
-								<img src="<?php echo $img_dir;?>ssr-gallery-06.jpg" alt="太阳能分布式发电" title=""
-									data_count="5">
+								<img src="<?php echo $img_dir;?>ssr-gallery-06.jpg"
+									alt="太阳能分布式发电" title="" data_count="5">
 							</div>
 						</div>
 					</div>
@@ -243,6 +248,31 @@ $img_dir = get_img_path ();
 							});
 						});
 	</script>
+
+	<!-- Modal -->
+	<div class="modal fade" id="gh_contact" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true"
+		style="padding-top: 70px;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">联系方式</h4>
+				</div>
+				<div class="modal-body" style="text-align: left; margin: 30px;">
+					<p>电话：</p>
+					<p>邮箱：</p>
+					<p>地址：</p>
+				</div>
+				<!-- <div class="modal-footer"> -->
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
 </body>
 
 </html>

@@ -7,6 +7,8 @@ class GHStatic extends CI_Controller {
 	    parent::__construct();
 	    $this->load->helper('url');
 	    $this->load->helper('path');
+	    $this->lang->load('general', 'zh_cn');
+	    $this->load->helper('language');
 	}
 	
 	public function index()
