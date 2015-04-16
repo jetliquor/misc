@@ -19,6 +19,9 @@
  *
  */
 	define('ENVIRONMENT', 'development');
+	foreach ($_POST as $key => $value) {
+		echo $key.": ".$value.'\n';
+	}
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -81,7 +84,7 @@ if (defined('ENVIRONMENT'))
 			$application_folder = 'application/ghed';
 		}
 	}
-	$application_folder = 'application/ghed';
+	//$application_folder = 'application/ghed';
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER
